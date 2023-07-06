@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 
-#I convereted the .dat file to a .csv file for ease of use
+# I converted the .dat file to a .csv file for ease of use
 data = pd.read_csv('pscalar_0p0018.csv')
 time = data.iloc[:, 0]
 data_values = data.iloc[:, 1]
@@ -20,10 +20,10 @@ for t in unique_times:
 x = unique_times
 y = np.array(data_mean)
 
-# Determine the center point for the polynomial fit
+# Determing the centre point for the polynomial fit
 center = (x.max() - x.min()) / 2
 
-# Shifting the x values to be centered at new center
+# Shifting the x values to be centred at new centre
 x_shifted = x - center
 
 #Assumed model function with the shifted x values
